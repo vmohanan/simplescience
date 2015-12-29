@@ -5,6 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
+// help from - http://crunchify.com/how-to-build-restful-service-with-java-using-jax-rs-and-jersey/
+
 @Path("/ctofservice")
 public class CtoFService {
     @GET
