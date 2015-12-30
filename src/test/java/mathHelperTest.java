@@ -10,10 +10,10 @@ public class mathHelperTest {
     public void AddTest()
     {
         MathHelper mc=new MathHelper();
-        assertEquals(mc.add(4,5),9);
+        assertEquals(mc.add(4,5),8);
         assertEquals(mc.add(0,5),5);
         assertEquals(mc.add(0,0),0);
-        assertEquals(mc.add(100,100),200);
+        assertEquals(mc.add(100,100),200);reated
     }
 
     @Test
