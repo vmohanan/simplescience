@@ -8,11 +8,17 @@
   <name>simplesciences Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
-  <dependencies>
+    <properties>
+        <pmd-version>3.4</pmd-version>
+        <junit-version>4.11</junit-version>
+    </properties>
+
+
+    <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>${junit-version}</version>
       <!--scope>test</scope  http://stackoverflow.com/questions/12403497/maven-error-package-org-junit-does-not-exist-->
     </dependency>
     <dependency>
@@ -81,7 +87,7 @@
             <artifactId>maven-pmd-plugin</artifactId>
             <version>${pmd-version}</version>
             <configuration>
-                <linkXref>true</linkXref>
+                <!--linkXref>true</linkXref-->
                 <sourceEncoding>utf-8</sourceEncoding>
                 <minimumTokens>10</minimumTokens>
             </configuration>
