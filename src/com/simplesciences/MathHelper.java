@@ -4,7 +4,7 @@ package com.simplesciences;
 public class MathHelper {
     public int add(int a,int b)
     {
-        return (a+b)+1;
+        return (a+b)*1;
     }
 
     public float add(float a,float b)
