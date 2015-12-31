@@ -13,7 +13,7 @@ public class mathservice {
     @Produces("application/json")
     public String add(@PathParam("a") Double a, @PathParam("b") Double b) {
         MathHelper mh=new MathHelper();
-        String ans= "" + mh.add(a,b);
+        String ans= "1*" + mh.add(a,b);
        // String result = "@Produces(\"application/json\") Output: \n\nadding two numbers: \n\n" + ans;
         return "{\"" + a + "+" + b + "\" : " + ans + " }";
     }
