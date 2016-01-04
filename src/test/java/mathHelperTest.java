@@ -14,6 +14,7 @@ public class mathHelperTest {
         assertEquals(mc.add(0,5),5);
         assertEquals(mc.add(100,100),200);
         assertEquals(mc.add(1000,1000),2000);
+        assertEquals(mc.add(10000,10000),20000);
     }
 
     @Test
