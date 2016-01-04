@@ -13,6 +13,7 @@ public class mathHelperTest {
         assertEquals(mc.add(4,5),9);
         assertEquals(mc.add(0,5),5);
         assertEquals(mc.add(100,100),200);
+        assertEquals(mc.add(1000,1000),2000);
     }
 
     @Test
