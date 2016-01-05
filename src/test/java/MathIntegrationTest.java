@@ -37,5 +37,6 @@ public class MathIntegrationTest {
         MathHelper mc3=new MathHelper();
         assertEquals(mc3.add(1.5,2.3),3.8,0.01);
         assertEquals(mc3.add(2.25,-1.35),0.90,0.01);
+        assertEquals(mc3.add(3.25,-1.35),1.90,0.01);
     }
 }
