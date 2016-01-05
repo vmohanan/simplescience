@@ -28,7 +28,7 @@ public class MathIntegrationTest {
     {
         MathHelper mc3=new MathHelper();
         assertEquals(mc3.add(-4,0),-4);
-        assertEquals(mc3.add(0,-15),-15);
+        assertEquals(mc3.add(1,-15),-15);
     }
 
     @Test
