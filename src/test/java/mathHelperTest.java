@@ -36,4 +36,20 @@ public class mathHelperTest {
         assertEquals(mc.add(0,-2),-2);
         assertEquals(mc.add(0,0),0);
     }
+
+    @Test
+    public void AddDoubleTest()
+    {
+        MathHelper mc=new MathHelper();
+        assertEquals(mc.add(-4.5,0),-4.5,0.1);
+        assertEquals(mc.add(0,-1.5),-1.5,0.1);
+    }
+
+    @Test
+    public void AddDouble2Test()
+    {
+        MathHelper mc=new MathHelper();
+        assertEquals(mc.add(-4.5,1.5),-3.0,0.1);
+        assertEquals(mc.add(-0.70,-1.5),-2.20,0.1);
+    }
 }
