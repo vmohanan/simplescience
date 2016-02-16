@@ -10,7 +10,7 @@ public class MathIntegrationTest {
     {
         MathHelper mc1=new MathHelper();
         assertEquals(mc1.add(4,5),9);
-        assertEquals(mc1.add(0,5),5);
+        assertEquals(mc1.add(10,5),15);
         assertEquals(mc1.add(100,100),200);
         assertEquals(mc1.add(200,100),300);
     }
