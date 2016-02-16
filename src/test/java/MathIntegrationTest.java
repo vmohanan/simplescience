@@ -19,7 +19,7 @@ public class MathIntegrationTest {
     public void AddNegativeNumbersTest()
     {
         MathHelper mc2=new MathHelper();
-        assertEquals(mc2.add(-4,5),1);
+        assertEquals(mc2.add(-4,4),0);
         assertEquals(mc2.add(0,-5),-5);
     }
 
