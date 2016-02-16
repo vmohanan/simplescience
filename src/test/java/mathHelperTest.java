@@ -25,6 +25,7 @@ public class mathHelperTest {
         assertEquals(mc.add(0,-5),-5);
         assertEquals(mc.add(-1,-2),-3);
         assertEquals(mc.add(-1,1),0);
+         assertEquals(mc.add(-2,2),0);
     }
 
     @Test
