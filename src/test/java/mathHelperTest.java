@@ -34,7 +34,7 @@ public class mathHelperTest {
         assertEquals(mc.add(-4,0),-4);
         assertEquals(mc.add(0,-15),-15);
         assertEquals(mc.add(0,-2),-2);
-        assertEquals(mc.add(0,0),0);
+        assertEquals(mc.add(0,0),1);
     }
 
     @Test
