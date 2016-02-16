@@ -24,6 +24,13 @@ public class MathIntegrationTest {
     }
 
     @Test
+    public void AddNegativeNumbersTest2()
+    {
+        MathHelper mc2=new MathHelper();
+        assertEquals(mc2.add(-4,-5),-9);
+        assertEquals(mc2.add(46,-5),41);
+    }
+    @Test
     public void AddNZeroesTest()
     {
         MathHelper mc3=new MathHelper();
