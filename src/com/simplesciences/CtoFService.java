@@ -32,4 +32,22 @@ public class CtoFService {
         String result = "@Produces(\"application/xml\") Output: \n\nC to F Converter Output: \n\n" + fahrenheit;
         return "<ctofservice>" + "<celsius>" + celsius + "</celsius>" + "<ctofoutput>" + result + "</ctofoutput>" + "</ctofservice>";
     }
+    
+    @Path("{Buff}")
+    @GET
+    @Produces()
+    public String StrangeExample(@PathParam("Buff") Double Buff) {
+    {
+        int importantData =1;
+        int[]  buffer = new int[10];
+    
+        for (int i =0; i < 15; i++)
+          buffer[i] = 7;
+    
+        String result = "@Produces(\"application/xml\") Output: \n\nStrange function for Buffer Overfloe: \n\n" + i;
+        return "<BUFF>" + "<buff>buff</celsius>" + "<b>" + result + "</b>" + "</BUFF>";
+        
+    //    System.out.println("after buffer overflow ");
+    //    System.out.println("Important data  = "+importantData);
+    }
 }
