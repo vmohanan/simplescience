@@ -29,7 +29,9 @@ public class BuffFlow {
         {
             for (int i =0; i < 15; i++)
             {
+                System.out.println( i);
                 buffer[i] = 1 + i;
+                System.out.println( buffer[i]);
                 importantData = importantData + buffer[i];
             }
         }
