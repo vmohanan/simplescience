@@ -8,7 +8,7 @@ import javax.ws.rs.Produces;
 // help from - http://crunchify.com/how-to-build-restful-service-with-java-using-jax-rs-and-jersey/
 
 @Path("/buffflow")
-public class BuffFlowService {
+public class BuffFlow {
     @GET
     @Produces("application/xml")
     public String BuffFlow() {
