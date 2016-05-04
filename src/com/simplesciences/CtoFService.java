@@ -41,9 +41,15 @@ public class CtoFService {
         int importantData =1;
         int[]  buffer = new int[10];
     
-        for (int i =0; i < 15; i++)
-          buffer[i] = 7;
-    
+        try
+        {
+            for (int i =0; i < 15; i++)
+                buffer[i] = 7;
+        }
+        catch (Exception e)
+        {
+            System.out.println("I caught an exception" + e.getMessage());
+        }
         String result = "@Produces(\"application/xml\") Output: \n\nStrange function for Buffer Overfloe: \n\n" + Buff;
         return "<BUFF>" + "<buff>buff</celsius>" + "<b>" + result + "</b>" + "</BUFF>";
         
