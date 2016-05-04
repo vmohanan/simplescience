@@ -33,6 +33,7 @@ public class CtoFService {
         return "<ctofservice>" + "<celsius>" + celsius + "</celsius>" + "<ctofoutput>" + result + "</ctofoutput>" + "</ctofservice>";
     }
     
+    /*
     @Path("{Buff}")
     @GET
     @Produces()
@@ -56,4 +57,5 @@ public class CtoFService {
     //    System.out.println("after buffer overflow ");
     //    System.out.println("Important data  = "+importantData);
     }
+    */
 }
