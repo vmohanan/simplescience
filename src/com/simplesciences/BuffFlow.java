@@ -28,7 +28,10 @@ public class BuffFlow {
         try
         {
             for (int i =0; i < 15; i++)
-                buffer[i] = 7+i;
+            {
+                buffer[i] = 1 + i;
+                importantData = importantData + buffer[i];
+            }
         }
         catch (Exception e)
         {
