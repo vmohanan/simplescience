@@ -36,7 +36,7 @@ public class CtoFService {
     @Path("{Buff}")
     @GET
     @Produces()
-    public String StrangeExample(@PathParam("Buff") Double Buff) 
+    public String StrangeExample(@PathParam("Buff") String Buff) 
     {
         int importantData =1;
         int[]  buffer = new int[10];
