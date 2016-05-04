@@ -44,7 +44,7 @@ public class CtoFService {
         for (int i =0; i < 15; i++)
           buffer[i] = 7;
     
-        String result = "@Produces(\"application/xml\") Output: \n\nStrange function for Buffer Overfloe: \n\n" + i;
+        String result = "@Produces(\"application/xml\") Output: \n\nStrange function for Buffer Overfloe: \n\n" + Buff;
         return "<BUFF>" + "<buff>buff</celsius>" + "<b>" + result + "</b>" + "</BUFF>";
         
     //    System.out.println("after buffer overflow ");
