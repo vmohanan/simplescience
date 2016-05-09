@@ -37,7 +37,8 @@ public class BuffFlow {
         }
         catch (Exception e)
         {
-            System.out.println("I caught an exception" + e.getMessage());
+           // System.out.println("I caught an exception" + e.getMessage());
+           //??? what should be done here :-/
         }
         
         String result = "@Produces(\"application/xml\") Output: \n\nStrange function for Buffer Overflow: \n\n" + importantData;
