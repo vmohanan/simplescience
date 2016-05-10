@@ -25,8 +25,8 @@ public class BuffFlow {
         int importantData =1;
         int[]  buffer = new int[10];
     
-        try
-        {
+     //   try
+      //  {
             for (int i =0; i < 15; i++)
             {
                // System.out.println( i); -- commneting out as this is not causing buffer over flow condition jdk 1.8
@@ -34,13 +34,13 @@ public class BuffFlow {
                // System.out.println( buffer[i]);  -- commneting out as this is not causing buffer over flow condition jdk 1.8
                 importantData = importantData + buffer[i];
             }
-        }
+      /*  }
         catch (Exception e)
         {
            // System.out.println("I caught an exception" + e.getMessage());
            //??? what should be done here :-/
         }
-        
+        */
         String result = "@Produces(\"application/xml\") Output: \n\nStrange function for Buffer Overflow: \n\n" + importantData;
         return "<BUFF><buff>buff</buff>" + "<b>" + result + "</b>" + "</BUFF>";
         
