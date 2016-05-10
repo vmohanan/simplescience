@@ -34,7 +34,7 @@ public class BuffFlow {
                // System.out.println( buffer[i]);  -- commneting out as this is not causing buffer over flow condition jdk 1.8
                 importantData = importantData + buffer[i];
             }
-        }
+    //    }
    //     catch (Exception e)
    //     {
            // System.out.println("I caught an exception" + e.getMessage());
