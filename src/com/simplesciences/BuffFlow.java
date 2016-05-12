@@ -29,9 +29,9 @@ public class BuffFlow {
       //  {
             for (int i =0; i < 15; i++)
             {
-               // System.out.println( i); -- commneting out as this is not causing buffer over flow condition jdk 1.8
+                System.out.println( i); // commneting out as this is not causing buffer over flow condition jdk 1.8
                 buffer[i] = 1 + i;
-               // System.out.println( buffer[i]);  -- commneting out as this is not causing buffer over flow condition jdk 1.8
+               // System.out.println( buffer[i]);  // commneting out as this is not causing buffer over flow condition jdk 1.8
                 importantData = importantData + buffer[i];
             }
       /*  }
