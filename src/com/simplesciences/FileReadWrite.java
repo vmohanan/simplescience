@@ -39,8 +39,6 @@ public class FileReadWrite {
     @Produces("application/json")
     public Response readfile(@PathParam("f") String f) throws IOException  {
            JSONObject jsonObject = new JSONObject();
-          //  File file=new File("E://file.txt");
-          //  FileReader fr = new FileReader(file); 
             String text,res="";
             if (f != null ){
                 f="/"+f;
