@@ -23,7 +23,7 @@ public class FileReadWrite {
     
     @GET
     @Produces("application/json")
-    public Response convertFtoC() throws JSONException {
+    public Response Basepath() throws JSONException {
 
         JSONObject jsonObject = new JSONObject();
 
@@ -42,15 +42,21 @@ public class FileReadWrite {
           //  File file=new File("E://file.txt");
           //  FileReader fr = new FileReader(file); 
             String text,res="";
-            f="/"+f;
+            if (f != null ){
+                f="/"+f;
 
-            InputStream  file=this.getClass().getClassLoader().getResourceAsStream(f);
-            InputStreamReader isr = new InputStreamReader(file);
-            BufferedReader reader = new BufferedReader(isr);
-            
-            while ((text = reader.readLine()) != null) {
-                res = res + text;
+                InputStream  file=this.getClass().getClassLoader().getResourceAsStream(f);
+                InputStreamReader isr = new InputStreamReader(file);
+                BufferedReader reader = new BufferedReader(isr);
+
+                while ((text = reader.readLine()) != null) {
+                    res = res + text;
                 }
+            }
+            else {
+                f="";
+                res="File name should be provided";
+            }
             
         jsonObject.put("file Name", f);
         jsonObject.put("file content", res);
