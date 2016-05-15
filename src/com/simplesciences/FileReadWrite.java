@@ -50,7 +50,7 @@ public class FileReadWrite {
                 while ((text = reader.readLine()) != null) {
                     res = res + text;
                 }
-                file.close();
+                file.close(); // added this statement.
             }
             else {
                 f="";
