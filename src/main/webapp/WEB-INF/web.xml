@@ -14,7 +14,7 @@
   </welcome-file-list>
 
 <session-config>
-        <session-timeout>60</session-timeout>
+        <session-timeout>5</session-timeout>
 </session-config>
 
   <servlet>
