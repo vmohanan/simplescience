@@ -62,6 +62,7 @@ public class FileReadWrite {
         jsonObject.put("file content", res);
         
         String result = "@Produces(\"application/json\") Output: \n\n" + jsonObject;
-        return Response.status(200).entity(result).build();
+        return Response.status(200).entity("temp").build();
+        //return Response.status(200).entity(result).build();
     }
 }
