@@ -9,10 +9,15 @@ build:
   ci:
     - java -version
     - ls -l
+    - ls -l target
     
 before_script: 
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
 script:
-  - mvn clean install cobertura:cobertura 
+  - mvn install cobertura:cobertura 
+
+after_script:
+  - ls -l
+  - ls -l target
