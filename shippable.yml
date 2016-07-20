@@ -5,6 +5,14 @@ language: java
 jdk:
   - oraclejdk8
 
-build:
-  ci:
-    - java -version
+#build:
+#  ci:
+#    - java -version
+    
+before_script: 
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
+
+script:
+  - mvn clean cobertura:cobertura
+  - mvn test -Parq-jbossas-managed
