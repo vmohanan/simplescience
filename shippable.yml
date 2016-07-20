@@ -14,5 +14,4 @@ before_script:
   - mkdir -p shippable/codecoverage
 
 script:
-  - mvn clean cobertura:cobertura
-  - mvn test -Parq-jbossas-managed
+  - mvn clean install cobertura:cobertura 
