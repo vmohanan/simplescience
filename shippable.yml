@@ -10,6 +10,10 @@ build:
     - java -version
     - ls -l
     - ls -l target
+  post_ci:
+    #Commit the container only if you want all the artifacts from the CI step
+    - docker commit $SHIPPABLE_CONTAINER_NAME myvinod/shippable:latest
+    - docker push myvinod/shippable:latest
     
 before_script: 
   - mkdir -p shippable/testresults
@@ -21,3 +25,8 @@ script:
 after_script:
   - ls -l
   - ls -l target
+  
+integrations:
+  hub:
+    - integrationName: mydocker
+      type: docker
