@@ -30,3 +30,6 @@ integrations:
   hub:
     - integrationName: mydocker
       type: docker
+      branches:
+        only:
+          - master
