@@ -28,7 +28,7 @@ after_script:
   
 integrations:
   hub:
-    - integrationName: mydocker
+    - integrationName: mydockerhub
       type: docker
       branches:
         only:
