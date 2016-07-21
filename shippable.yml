@@ -42,6 +42,8 @@ integrations:
   notifications:
     - integrationName: myslack
       type: slack
+      recipients:
+        - "@vinodm"
       branches:
         only:
           - master
