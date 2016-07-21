@@ -39,3 +39,14 @@ integrations:
       branches:
         only:
           - master
+  notifications:
+    - integrationName: myslack
+      type: slack
+      recipients: @vinodm
+      branches:
+        only:
+          - master
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_change: always 
