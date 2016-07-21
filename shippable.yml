@@ -16,7 +16,8 @@ build:
     - java -version
     - ls -l
     - ls -l src
-    - curl www.google.com
+    - curl --version
+   # - curl www.google.com  - this didnt work, the build hung, so had to cancel 
   post_ci:
     #Commit the container only if you want all the artifacts from the CI step
     - docker commit $SHIPPABLE_CONTAINER_NAME myvinod/shipbuild:$BUILD_NUMBER
