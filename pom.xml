@@ -74,6 +74,8 @@
                 </excludes>
                 <!--          <parallel>classesAndMethods</parallel>
                 <useUnlimitedThreads>true</useUnlimitedThreads>-->
+                 <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                 <reportsDirectory>../shippable/testresults</reportsDirectory>
             </configuration>
             <executions>
                 <execution>
@@ -125,6 +127,7 @@
                 <formats>
                     <format>xml</format>
                 </formats>
+                <outputDirectory>shippable/codecoverage</outputDirectory>
             </configuration>
 
             <executions>
