@@ -7,7 +7,7 @@ jdk:
 
 build:
   pre_ci_boot:
-    image_name: myvinod/shipbuild
+    image_name: myvinod/shipbuild:base
     image_tag: latest
     pull: true
     options: "-e HOME=/root"
