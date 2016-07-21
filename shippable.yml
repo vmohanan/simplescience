@@ -31,7 +31,7 @@ script:
   - mvn test install cobertura:cobertura 
 
 after_script:
-  - ls -la
+  - ls -l
   - ls -l target
   
 integrations:
