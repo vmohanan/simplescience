@@ -16,6 +16,7 @@ build:
     - java -version
     - ls -l
     - ls -l src
+    - curl 127.0.0.1
   post_ci:
     #Commit the container only if you want all the artifacts from the CI step
     - docker commit $SHIPPABLE_CONTAINER_NAME myvinod/shipbuild:$BUILD_NUMBER
