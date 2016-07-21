@@ -18,8 +18,8 @@ build:
     - ls -l src
   post_ci:
     #Commit the container only if you want all the artifacts from the CI step
-    - docker commit $SHIPPABLE_CONTAINER_NAME myvinod/shippable:$BUILD_NUMBER
-    - docker push myvinod/shipbuild:$BUILD_NUMBER
+    - docker commit $SHIPPABLE_CONTAINER_NAME myvinod/shippable:latest
+    - docker push myvinod/shipbuild:latest
     
 before_script: 
   - mkdir -p shippable/testresults
