@@ -5,6 +5,17 @@ language: java
 jdk:
   - oraclejdk8
 
+branches:
+  only:
+    - wip-huntd
+
+env:
+  global:
+    # USERNAME=****
+    - secure: uXysKEBMSfoLrpdJ6XB3gSaW8rgG/tFqzMjYkxgT+ZoznttkXLj8cMYidr+NI02SMLQyILzlozeIUL4ygymBC0dNhTB9kSP0dAlPOTgXeXQYWO5qd9CjPxxs7gp+STCTwt62xOGmWsZIiJJ2YKayupMrn46j5Fzk3vlFhO9D+prlQ+4w/FFcRfyZQEQHh7qvXGIeCIMZuexs0HorTU6eI1RsLzcmg+RsrNbLLK4swqF62fCdi8Ke/axIRBi23p4xrhsiNpLZ9h74SDWUIn6Wwp4Rrfg2QWlGwhDa1sg2BpGX0y0sNMlLYDQ6evSCMvZXAuCSFT6OeHSRnRbPMYbCww==
+    # PASSWORD=****
+    - secure: M2eMjWBzYVliAHowoiCrOqp4REzXWR80t+9Yg8YGxVe7gxibRVbRRcShXZwrLvfAgz0g1DbNbsJrEa6oEwvzAFPKbYE5Sbok+kDZbU6uX2R8pmiSWmspGaAN9NUxFsgpYLDlGSSp2zvlU3oxUcw0O9KKAb8bM81op8kgiFa3FLjh/E65xTdQBcwYpohx1w3h1n7r3fPb5G9RMxJ/VB4a0f02CCVj0LmaOujtEgx9M9k3WaIvzkxQfuUJ04BN7VR84j0lUeCsQdIDkz1czjtHKtsRT84cdqmD53k7g9paWTPd5PdwJBKkT7acmPhTC9pmdpBAtSgEBgxxuWcvSgf5Ag==
+
 build:
   pre_ci_boot:
     image_name: myvinod/shipbuild
@@ -17,11 +28,18 @@ build:
     - ls -l
     - ls -l src
     - curl --version
+    #- mkdir -p shippable/testresults && mkdir -p shippable/codecoverage
+    #- sed -i "s/{USERNAME}/$USERNAME/" .m2/settings.xml
+    #- sed -i "s/{PASSWORD}/$PASSWORD/" .m2/settings.xml
+    #- mvn -q -B -s .m2/settings.xml -U clean cobertura:cobertura deploy
+    #- docker build -t quay.io/valassis/helloworld-nodejs-app2:$BRANCH.$BUILD_NUMBER .
+    #- docker push quay.io/valassis/helloworld-nodejs-app2:$BRANCH.$BUILD_NUMBER
+
    # - curl www.google.com  - this didnt work, the build hung, so had to cancel 
   post_ci:
     #Commit the container only if you want all the artifacts from the CI step
-    - docker commit $SHIPPABLE_CONTAINER_NAME myvinod/shipbuild:$BUILD_NUMBER
-    - docker push myvinod/shipbuild:$BUILD_NUMBER
+    - docker commit $SHIPPABLE_CONTAINER_NAME quay.io/valassis/helloworld-nodejs-app2:$BUILD_NUMBER
+    - docker push quay.io/valassis/helloworld-nodejs-app2:$BUILD_NUMBER
     
 before_script: 
   - mkdir -p shippable/testresults
@@ -36,20 +54,18 @@ after_script:
   
 integrations:
   hub:
-    - integrationName: mydockerhub
-      type: docker
-      branches:
-        only:
-          - master
-  notifications:
-    - integrationName: myslack
-      type: slack
-      recipients:
-        - "@vinodm"
-      branches:
-        only:
-          - master
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_change: always 
+    - integrationName: quayConduitCiCdSubscription
+      type: quay.io
+
+ # notifications:
+ #   - integrationName: myslack
+ #     type: slack
+ #     recipients:
+ #       - "@vinodm"
+ #     branches:
+ #       only:
+ #         - wip-huntd
+ #     on_start: always
+ #     on_success: always
+ #     on_failure: always
+ #     on_change: always
