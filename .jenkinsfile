@@ -1,5 +1,4 @@
-pipeline {
-  agent any
+node {
     stages {
         stage('one') {
             steps {
@@ -15,3 +14,20 @@ pipeline {
      }
     }
 }
+
+
+#pipeline {
+#  agent any
+#    stages {
+#        stage('one') {
+#            steps {
+#                echo 'Hello'
+#            }
+#        }
+#        stage('two' + i){
+#            steps {
+#                echo 'stage ${1}'
+#            }
+#        }
+#     }
+#}
