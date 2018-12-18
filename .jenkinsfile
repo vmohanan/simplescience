@@ -1,14 +1,10 @@
 node {
         stage('one') {
-            steps {
                 echo 'Hello'
-            }
         }
      for (int i=0;i <3; i++) {
         stage('two' + i){
-            steps {
                 echo 'stage ${1}'
-            }
         }
      }
 }
