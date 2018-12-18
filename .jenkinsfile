@@ -6,10 +6,12 @@ pipeline {
                 echo 'Hello'
             }
         }
-        stage('two'){
+     for (int i=0;i <3; i++) {
+        stage('two' + i){
             steps {
-                echo 'stage two'
+                echo 'stage ${1}'
             }
         }
+     }
     }
 }
